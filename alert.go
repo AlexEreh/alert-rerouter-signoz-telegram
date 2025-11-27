@@ -23,7 +23,7 @@ func formatAlertMessage(alertData AlertData) string {
 
 	if len(alertData.Alerts) > 0 {
 		for _, alert := range alertData.Alerts {
-			title := getValue(alert.Annotations, "title", "Нет названия")
+			title := getValue(alert.Annotations, "info", "Нет названия")
 			description := getValue(alert.Annotations, "description", "Нет описания")
 			severity := getValue(alert.Labels, "severity", "unknown")
 
