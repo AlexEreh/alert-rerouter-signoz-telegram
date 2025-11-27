@@ -1,9 +1,11 @@
 name: alert-rerouter
 services:
   telegram-webhook:
+    container_name: alert-rerouter
     build:
       context: .
       dockerfile: Dockerfile
+    network_mode: host
     ports:
       - "8081:8080"
     restart: unless-stopped
