@@ -126,7 +126,7 @@ func main() {
 		w.WriteHeader(http.StatusOK)
 	})
 
-	err := http.ListenAndServe("0.0.0.0:8080", mux)
+	err := http.ListenAndServe("0.0.0.0:8081", mux)
 	if err != nil {
 		slog.Error("error listening", slog.String(errorLogKey, err.Error()))
 	}
