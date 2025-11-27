@@ -1,0 +1,11 @@
+name: alert-rerouter
+services:
+  telegram-webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - TOKEN=${TOKEN}
+      - CHAT_ID=${CHAT_ID}
